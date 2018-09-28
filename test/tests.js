@@ -14,6 +14,12 @@ describe('Input Types', function () {
   it('should handle strings', function () {
     assert.equal('George Washington', nc('GEORGE WASHINGTON'));
   });
+  it('should handle strings with accent marks', function () {
+    assert.equal('Clément Dupont', nc('CLÉMENT DUPONT'));
+  });
+  it('should handle strings with accent marks starting by Mr', function () {
+    assert.equal('Mr Clément Dupont', nc('MR CLÉMENT DUPONT'));
+  });
 
   it('should handle arrays', function () {
     assert.deepEqual(
